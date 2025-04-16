@@ -1,5 +1,6 @@
 'use client';
 import { Rocket } from 'lucide-react'; // You can replace this icon with anything
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
@@ -8,7 +9,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <Rocket className="text-indigo-600 w-6 h-6" />
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
-            REQ<span className="text-indigo-600">&</span>GO
+            <Link href='/'>REQ<span className="text-indigo-600">&</span>GO</Link>
           </h1>
         </div>
       </div>
