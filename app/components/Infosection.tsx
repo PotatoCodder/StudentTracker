@@ -9,7 +9,7 @@ export default function InfoSection() {
       <div className="max-w-4xl mx-auto text-center space-y-4">
         <h2 className="text-3xl font-bold text-gray-800">Meet the Developer</h2>
         <p className="text-gray-600 text-lg">
-          Hi! I'm <span className="font-semibold text-indigo-600">[Your Name]</span>, the developer of this Student Tracking System. 
+          Hi! I'm <span className="font-semibold text-indigo-600">[Adrian Dave A, Escudero]</span>, the developer of this Student Tracking System. 
           Feel free to reach out or explore more of my work below!
         </p>
 

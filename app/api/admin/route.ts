@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import clientPromise from '@/app/lib/mongodb';
 
+
 export async function GET() {
   try {
     const client = await clientPromise;
@@ -14,6 +15,8 @@ export async function GET() {
   }
 }
 
+
+
 export async function POST(req: Request) {
   try {
     const client = await clientPromise;
@@ -22,15 +25,18 @@ export async function POST(req: Request) {
 
     const { username, password } = body;
 
-    if ( !username || !password ) {
-      return NextResponse.json({ success: false, error: "Missing Fields"}, { status: 404})
+    if (!username || !password) {
+      return NextResponse.json({ success: false, error: 'Missing fields' }, { status: 400 });
     }
 
-    await db.collection('admin').insertOne({ username, password })
+    const admin = await db.collection('admin').findOne({ username, password });
 
-    return NextResponse.json({ success: true, message: 'Admin Added Successfully!' })
+    if (!admin) {
+      return NextResponse.json({ success: false, error: 'Invalid credentials' }, { status: 401 });
+    }
 
-  } catch ( error: any) {
-    return NextResponse.json({ success: false, error: error.message}, { status: 500})
+    return NextResponse.json({ success: true, message: 'Login successful', admin });
+  } catch (error: any) {
+    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }

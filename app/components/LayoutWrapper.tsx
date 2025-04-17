@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Sidebar from './Sidebar';
 import InfoSection from './Infosection';
 import FeedbackSection from './FeedbackSection';
+import { BrowserRouter } from 'react-router-dom';
 
 interface prop {
     children: React.ReactNode

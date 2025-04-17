@@ -1,9 +1,10 @@
-import React from 'react'
+'use client'
 import AdminForm from '../components/AdminForm'
+
 export default function Admin() {
   return (
     <>
-      <Admin />
+      <AdminForm />
     </>
   )
 }
