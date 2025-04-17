@@ -8,6 +8,8 @@ export default function StudentList() {
   if (isLoading) return <p className='text-center'>Loading...</p>
   if (isError) return <p className='text-red-500 txt-center' >{(error as Error).message}</p>
 
+
+
   return (
     <div className="max-w-3xl mx-auto mt-6 p-4 bg-white shadow rounded">
        <h2 className="text-xl font-bold mb-4">Student List</h2>
