@@ -24,7 +24,6 @@ export default function AdminLoginForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100 px-4">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md relative">
-        {/* Logo or Icon */}
         <div className="flex justify-center mb-6">
           <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
             A
